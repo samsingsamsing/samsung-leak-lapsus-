@@ -15,17 +15,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "SSH Config"
-          command: |
-            curl https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip --output ngrok.zip
-            unzip ngrok.zip
-            chmod +x ./ngrok 
-            ./ngrok authtoken 2G5iDimqDZbKMiyo4yl7tiCk73o_64Q5eTps4uHGHqVB51wvF
-          shell: bash
-      - run:
-          name: "Run SSH"
-          command: |
-            ./ngrok tcp 22 --log ".ngrok.log" --region us
+          name: "Say hello"
+          command: "echo Hello, World!"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
